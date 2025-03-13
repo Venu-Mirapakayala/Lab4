@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fish Species Predictor</title>
+</head>
+
+<body>
+    <h2>Enter Fish Features</h2>
+    <form action="/predict" method="post">
+        <label>Width:</label><input type="text" name="Weight"><br>
+        <label>Length1:</label><input type="text" name="Length1"><br>
+        <label>Length2:</label><input type="text" name="Length2"><br>
+        <label>Length3:</label><input type="text" name="Length3"><br>
+        <label>Height:</label><input type="text" name="Height"><br>
+        <label>Width:</label><input type="text" name="Width"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <p>Predicted Species :</p> {{prediction}}
+    {% endif %}
+</body>
+
+</html>
